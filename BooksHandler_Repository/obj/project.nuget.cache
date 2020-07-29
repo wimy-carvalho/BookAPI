@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HYcUmTFvRiwr2QgcDSThaofWH8IUzis/qjeShAwKLiuE6grgZNMiepbDUh2sT/dwo+Tw36IjgubiHubdjDPYNQ==",
+  "dgSpecHash": "vM2udg6WM+4erpItWLIEGppXrkZA8nGfONE+x84rpulG4AooomFtnect6d7a53Jjnnl5QPFVbr7SMeCN1ik6Jw==",
   "success": true,
   "projectFilePath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksHandler_Repository\\BooksHandler_Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wimyc\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
+    "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
     "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",

@@ -7,7 +7,6 @@ C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\Bo
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\bin\Debug\netcoreapp3.1\BooksHandler.runtimeconfig.dev.json
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\bin\Debug\netcoreapp3.1\BooksHandler.dll
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\bin\Debug\netcoreapp3.1\BooksHandler.pdb
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\obj\Debug\netcoreapp3.1\BooksHandler.csprojAssemblyReference.cache
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\obj\Debug\netcoreapp3.1\BooksHandler.AssemblyInfoInputs.cache
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\obj\Debug\netcoreapp3.1\BooksHandler.AssemblyInfo.cs
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler\obj\Debug\netcoreapp3.1\BooksHandler.csproj.CoreCompileInputs.cache

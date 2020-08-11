@@ -2,9 +2,7 @@
 using BooksHandler.View;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using RollBack_Core.Interface;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -36,87 +34,99 @@ namespace BooksHandler.Controllers
             return Ok(getBooks);
         }
 
-        [HttpPost]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(Book), 201)]
-        [ProducesResponseType(typeof(IDictionary<string, string>), 400)]
-        public async Task<ActionResult<Book>> Post([FromBody] BookViewModel value)
-        {
-            var searchBookByName = await _serviceBook.FindByName(value._name);
-            if (searchBookByName != null)
-                return Ok(searchBookByName);
-            Book book;
-            try
-            {
-                book = transformViewModelToModel(value);
+        //[HttpPost]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(Book), 201)]
+        //[ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        //public async Task<ActionResult<Book>> Post([FromBody] BookViewModel value)
+        //{
+        //    var searchBookByName = await _serviceBook.FindByName(value._name);
+        //    if (searchBookByName != null)
+        //        return Ok(searchBookByName);
+        //    Book book;
+        //    try
+        //    {
+        //        book = transformViewModelToModel(value);
 
-                _serviceBook.Add(book);
+        //        _serviceBook.Add(book);
 
-                //everthing is ok
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                _uow.Dispose();
-                throw;
-            }
+        //        //everthing is ok
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        _uow.Dispose();
+        //        throw;
+        //    }
 
-            return Created("/book", book);
-        }
+        //    return Created("/book", book);
+        //}
 
-        public async Task<ActionResult<Book>> Delete(string id)
-        {
-            var foundBook = _serviceBook.GetById(new ObjectId(id));
-            if (foundBook == null)
-                return NotFound();
+        //[HttpDelete("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(Book), 201)]
+        //[ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        //public async Task<ActionResult<Book>> Delete(string id)
+        //{
+        //    var foundBook = _serviceBook.GetById(new ObjectId(id));
+        //    if (foundBook == null)
+        //        return NotFound();
 
-            try
-            {
-                _serviceBook.Remove(new ObjectId(id));
+        //    try
+        //    {
+        //        _serviceBook.Remove(new ObjectId(id));
 
-                //everthing is ok();
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        //everthing is ok();
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        public async Task<ActionResult<Book>> GetById(string id)
-        {
-            var foundBook = _serviceBook.GetById(new ObjectId(id));
-            if (foundBook == null)
-                return NotFound();
+        //[HttpGet("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(Book), 201)]
+        //[ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        //public async Task<ActionResult<Book>> GetById(string id)
+        //{
+        //    var foundBook = _serviceBook.GetById(new ObjectId(id));
+        //    if (foundBook == null)
+        //        return NotFound();
 
-            return Ok(foundBook);
-        }
+        //    return Ok(foundBook);
+        //}
 
-        public async Task<ActionResult<Book>> Update([FromBody] BookViewModel bookVM, string id)
-        {
-            Book book;
-            var foundBook = _serviceBook.GetById(new ObjectId(id));
-            if (foundBook == null)
-                return NotFound();
+        //[HttpPut("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(Book), 201)]
+        //[ProducesResponseType(typeof(IDictionary<string, string>), 400)]
+        //public async Task<ActionResult<Book>> Update([FromBody] BookViewModel bookVM, string id)
+        //{
+        //    Book book;
+        //    var foundBook = _serviceBook.GetById(new ObjectId(id));
+        //    if (foundBook == null)
+        //        return NotFound();
 
-            try
-            {
-                book = transformViewModelToModel(bookVM);
+        //    try
+        //    {
+        //        book = transformViewModelToModel(bookVM);
 
-                _serviceBook.Update(book, id);
+        //        _serviceBook.Update(book, id);
 
-                //everthing is ok
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        //everthing is ok
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok(await GetById(id));
-        }
+        //    return Ok(await GetById(id));
+        //}
 
         private Book transformViewModelToModel(BookViewModel bookVM)
         {

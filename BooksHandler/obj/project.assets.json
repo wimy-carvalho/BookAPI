@@ -22,6 +22,27 @@
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/2.1.2": {
         "type": "package",
         "compile": {
@@ -1875,6 +1896,20 @@
         "runtime": {
           "bin/placeholder/BooksHandler_Core.dll": {}
         }
+      },
+      "BooksHandler_Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BooksHandler_Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.6"
+        },
+        "compile": {
+          "bin/placeholder/BooksHandler_Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BooksHandler_Repository.dll": {}
+        }
       }
     }
   },
@@ -1926,6 +1961,38 @@
         "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
         "tools/netcoreapp2.1/GetDocument.Insider.dll",
         "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/3.1.6": {
+      "sha512": "Z7QAA7XFvYuGZCKsfzetdIq0Vj1ngiIzCBBqerlQMhewx1ZFLXHuvKx9xAIWeZqhuQv69VmFs3vO0Af9FDAa9Q==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/3.1.6": {
+      "sha512": "X+h3tO383iMbtFxYp6Al4pgBzbfQKJY8/gd4U7+sZy90XeSfnw5SwHyCiRrAePG6kee4zCGsvQHPCqaTZ876hw==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.2": {
@@ -6387,11 +6454,17 @@
       "type": "project",
       "path": "../BooksCore/BooksHandler_Core.csproj",
       "msbuildProject": "../BooksCore/BooksHandler_Core.csproj"
+    },
+    "BooksHandler_Repository/1.0.0": {
+      "type": "project",
+      "path": "../BooksHandler_Repository/BooksHandler_Repository.csproj",
+      "msbuildProject": "../BooksHandler_Repository/BooksHandler_Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BooksHandler_Core >= 1.0.0",
+      "BooksHandler_Repository >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.5.1"
     ]
   },
@@ -6427,6 +6500,9 @@
           "projectReferences": {
             "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj": {
               "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj"
+            },
+            "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksHandler_Repository\\BooksHandler_Repository.csproj": {
+              "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksHandler_Repository\\BooksHandler_Repository.csproj"
             }
           }
         }

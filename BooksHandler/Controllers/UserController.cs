@@ -3,9 +3,7 @@ using BooksCore.Services;
 using BooksHandler.View;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using RollBack_Core.Interface;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -29,98 +27,95 @@ namespace BooksHandler.Controllers
         [HttpGet]
         [Consumes("application/json")]
         [ProducesResponseType(typeof(User), 200)]
+        [ProducesResponseType(typeof(User), 404)]
         public async Task<ActionResult<IEnumerable<User>>> Get()
         {
-            var allUser = _serviceUser.GetAll();
-            if (allUser == null)
-                return NotFound();
-
-            return Ok(allUser.Result);
+            return Ok(await _serviceUser.GetAll());
         }
 
-        [HttpGet]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(User), 200)]
-        public async Task<ActionResult<User>> GetById(string id)
-        {
-            var foundUser = _serviceUser.GetById(new ObjectId(id));
-            if (foundUser == null)
-                return NotFound();
-            return Ok(foundUser);
-        }
+        //[HttpGet("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(User), 200)]
+        //public async Task<ActionResult<User>> GetById(string id)
+        //{
+        //    var foundUser = _serviceUser.GetById(new ObjectId(id));
+        //    if (foundUser == null)
+        //        return NotFound();
+        //    return Ok(foundUser);
+        //}
 
-        [HttpDelete]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(User), 200)]
-        public async Task<ActionResult<User>> Delete(string id)
-        {
-            var foundUser = GetById(id);
-            if (foundUser == null)
-                return NotFound();
+        //[HttpDelete("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(User), 200)]
+        //public async Task<ActionResult<User>> Delete(string id)
+        //{
+        //    var foundUser = GetById(id);
+        //    if (foundUser == null)
+        //        return NotFound();
 
-            try
-            {
-                _serviceUser.Remove(new ObjectId(id));
+        //    try
+        //    {
+        //        _serviceUser.Remove(new ObjectId(id));
 
-                //everthing is ok
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        //everthing is ok
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        [HttpPut]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(User), 200)]
-        public async Task<ActionResult<User>> Update([FromBody] UserViewModel userVM, string id)
-        {
-            var foundUser = GetById(id);
-            if (foundUser == null)
-                return NotFound();
+        //[HttpPut("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(User), 200)]
+        //public async Task<ActionResult<User>> Update([FromBody] UserViewModel userVM, string id)
+        //{
+        //    var foundUser = GetById(id);
+        //    if (foundUser == null)
+        //        return NotFound();
 
-            try
-            {
-                _serviceUser.Update(transformViewModelToModel(userVM), id);
+        //    try
+        //    {
+        //        _serviceUser.Update(transformViewModelToModel(userVM), id);
 
-                //everthing is ok
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        //everthing is ok
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok(GetById(id).Result);
-        }
+        //    return Ok(GetById(id).Result);
+        //}
 
-        [HttpPost]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(User), 201)]
-        public async Task<ActionResult<IEnumerable<User>>> Post([FromBody] UserViewModel value)
-        {
-            var foundUser = _serviceUser.FindByName(value.Name);
-            if (foundUser != null)
-                return Ok(foundUser);
+        //[HttpPost]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(User), 201)]
+        //public async Task<ActionResult<IEnumerable<User>>> Post([FromBody] UserViewModel value)
+        //{
+        //    var foundUser = _serviceUser.FindByName(value.Name);
+        //    if (foundUser != null)
+        //        return Ok(foundUser);
 
-            User u = transformViewModelToModel(value);
+        //    User u = transformViewModelToModel(value);
 
-            try
-            {
-                _serviceUser.AddUser(u);
+        //    try
+        //    {
+        //        _serviceUser.AddUser(u);
 
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
         public User transformViewModelToModel(UserViewModel userVM)
         {

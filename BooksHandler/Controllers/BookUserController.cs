@@ -3,9 +3,7 @@ using BooksCore.Services;
 using BooksHandler.View;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using RollBack_Core.Interface;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -35,49 +33,53 @@ namespace BooksHandler.Controllers
             return Ok(await _serviceBookUser.GetAll());
         }
 
-        [HttpPost]
-        [Consumes("application/json")]
-        [ProducesResponseType(typeof(BooksUser), 201)]
-        [ProducesResponseType(typeof(BooksUser), 404)]
-        public async Task<ActionResult<IEnumerable<BooksUser>>> Post(BooksUserViewModel booksUserVm)
-        {
-            var booksUserByID = await _serviceBookUser.GetByParentID(booksUserVm._user);
-            if (booksUserByID != null)
-                return Ok(booksUserByID);
+        //[HttpPost]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(BooksUser), 201)]
+        //[ProducesResponseType(typeof(BooksUser), 404)]
+        //public async Task<ActionResult<IEnumerable<BooksUser>>> Post(BooksUserViewModel booksUserVm)
+        //{
+        //    var booksUserByID = await _serviceBookUser.GetByParentID(booksUserVm._user);
+        //    if (booksUserByID != null)
+        //        return Ok(booksUserByID);
 
-            try
-            {
-                _serviceBookUser.Add(transformViewModelToModel(booksUserVm));
+        //    try
+        //    {
+        //        _serviceBookUser.Add(transformViewModelToModel(booksUserVm));
 
-                await _uow.Commit();
-            }
-            catch (System.Exception)
-            {
-                throw;
-            }
+        //        await _uow.Commit();
+        //    }
+        //    catch (System.Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Created("/book-user", await _serviceBookUser.GetByParentID(booksUserVm._user));
-        }
+        //    return Created("/book-user", await _serviceBookUser.GetByParentID(booksUserVm._user));
+        //}
 
-        public async Task<ActionResult<BooksUser>> Update(BooksUserViewModel booksUserVm)
-        {
-            var booksUserByID = await _serviceBookUser.GetById(new ObjectId(booksUserVm._id));
-            if (booksUserByID == null)
-                return NotFound();
+        //[HttpPut("{id}")]
+        //[Consumes("application/json")]
+        //[ProducesResponseType(typeof(BooksUser), 201)]
+        //[ProducesResponseType(typeof(BooksUser), 404)]
+        //public async Task<ActionResult<BooksUser>> Update(BooksUserViewModel booksUserVm)
+        //{
+        //    var booksUserByID = await _serviceBookUser.GetById(new ObjectId(booksUserVm._id));
+        //    if (booksUserByID == null)
+        //        return NotFound();
 
-            try
-            {
-                _serviceBookUser.Update(transformViewModelToModel(booksUserVm), booksUserVm._id);
+        //    try
+        //    {
+        //        _serviceBookUser.Update(transformViewModelToModel(booksUserVm), booksUserVm._id);
 
-                await _uow.Commit();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //        await _uow.Commit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok(await _serviceBookUser.GetById(new ObjectId(booksUserByID._id)));
-        }
+        //    return Ok(await _serviceBookUser.GetById(new ObjectId(booksUserByID._id)));
+        //}
 
         private BooksUser transformViewModelToModel(BooksUserViewModel bookUserVM)
         {

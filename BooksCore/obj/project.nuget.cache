@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hp3nOucq5CIwWFrwPUYZ5xiyjK52rIBD9WboVqPEOyESk6XZGDojwCCQmJlcXBmxkXexdVqk2HK9LuZckNH2qg==",
+  "dgSpecHash": "QBd3ME51evAwL7PSonJ3b4Lhfv+uqHwx978j0ze/yMiy+zokOVq1MdXrG0yKhCPiHHpNO94nKyhYxCpqzmvr6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksCore.csproj",
+  "projectFilePath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wimyc\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\wimyc\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

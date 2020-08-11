@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "BooksHandler/1.0.0": {
         "dependencies": {
-          "BooksCore": "1.0.0",
+          "BooksHandler_Core": "1.0.0",
           "Swashbuckle.AspNetCore": "5.5.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1421,15 +1421,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "BooksCore/1.0.0": {
+      "BooksHandler_Core/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "2.10.4"
         },
         "runtime": {
-          "BooksCore.dll": {}
+          "BooksHandler_Core.dll": {}
         },
         "compile": {
-          "BooksCore.dll": {}
+          "BooksHandler_Core.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3895,7 +3895,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "BooksCore/1.0.0": {
+    "BooksHandler_Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

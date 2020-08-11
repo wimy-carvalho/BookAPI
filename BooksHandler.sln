@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BD7DE3F3-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{9A736019-9C2C-4BC0-894E-CFA33F2B4F75}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksCore", "BooksCore\BooksCore.csproj", "{95044D33-1832-48C5-9C11-8BA020224BD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksHandler_Core", "BooksCore\BooksHandler_Core.csproj", "{95044D33-1832-48C5-9C11-8BA020224BD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksHandler_Repository", "BooksHandler_Repository\BooksHandler_Repository.csproj", "{8F3F3B8C-26E5-41CD-83E4-69D5C786E602}"
 EndProject

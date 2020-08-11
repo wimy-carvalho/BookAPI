@@ -1863,17 +1863,17 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "BooksCore/1.0.0": {
+      "BooksHandler_Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "MongoDB.Driver": "2.10.4"
         },
         "compile": {
-          "bin/placeholder/BooksCore.dll": {}
+          "bin/placeholder/BooksHandler_Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BooksCore.dll": {}
+          "bin/placeholder/BooksHandler_Core.dll": {}
         }
       }
     }
@@ -6383,15 +6383,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "BooksCore/1.0.0": {
+    "BooksHandler_Core/1.0.0": {
       "type": "project",
-      "path": "../BooksCore/BooksCore.csproj",
-      "msbuildProject": "../BooksCore/BooksCore.csproj"
+      "path": "../BooksCore/BooksHandler_Core.csproj",
+      "msbuildProject": "../BooksCore/BooksHandler_Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BooksCore >= 1.0.0",
+      "BooksHandler_Core >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.5.1"
     ]
   },
@@ -6425,8 +6425,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksCore.csproj": {
-              "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksCore.csproj"
+            "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj": {
+              "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj"
             }
           }
         }

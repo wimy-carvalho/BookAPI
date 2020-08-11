@@ -1,6 +1,6 @@
-﻿using RollBack_Core.Interface;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using RollBack_Core.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -41,6 +41,13 @@ namespace KCO_Repository
             return Data.SingleOrDefault();
         }
 
+        public virtual async Task<TEntity> GetByParentID(string parentID)
+        {
+            ConfigDbSet();
+            var Data = await DbSet.FindAsync(Builders<TEntity>.Filter.Eq("parentID", parentID));
+            return Data.SingleOrDefault();
+        }
+
         public virtual async Task<TEntity> GetByCategory(string category)
         {
             ConfigDbSet();
@@ -56,10 +63,34 @@ namespace KCO_Repository
             return all.ToList();
         }
 
+        public virtual async Task<TEntity> FindByName(string name)
+        {
+            ConfigDbSet();
+
+            var Data = await DbSet.FindAsync(Builders<TEntity>.Filter.Eq("Name", name));
+            return Data.SingleOrDefault();
+        }
+
         public virtual void Update(TEntity obj, string _id)
         {
             ConfigDbSet();
             Context.AddCommand(() => DbSet.ReplaceOneAsync(Builders<TEntity>.Filter.Eq("_id", _id), obj));//id
+        }
+
+        public void AddBook(TEntity obj, string _id)
+        {
+            ConfigDbSet();
+
+            var filter = Builders<TEntity>.Filter.Eq("_id", _id);
+
+            var update = Builders<TEntity>.Update.Push("_books", obj);
+
+            DbSet.FindOneAndUpdate(filter, update);
+        }
+
+        public void removeBook(TEntity obj, string id)
+        {
+            throw new System.NotImplementedException();
         }
 
         public virtual void Remove(ObjectId id)

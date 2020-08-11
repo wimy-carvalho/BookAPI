@@ -6202,9 +6202,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksCore.csproj",
-      "projectName": "BooksCore",
-      "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksCore.csproj",
+      "projectUniqueName": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj",
+      "projectName": "BooksHandler_Core",
+      "projectPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\BooksHandler_Core.csproj",
       "packagesPath": "C:\\Users\\wimyc\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\wimyc\\OneDrive\\Ambiente de Trabalho\\onboarding\\MyBookAPI\\BookHandler\\BooksCore\\obj\\",
       "projectStyle": "PackageReference",

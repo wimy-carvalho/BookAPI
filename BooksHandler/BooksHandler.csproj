@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BooksCore\BooksCore.csproj" />
+    <ProjectReference Include="..\BooksCore\BooksHandler_Core.csproj" />
   </ItemGroup>
 
 

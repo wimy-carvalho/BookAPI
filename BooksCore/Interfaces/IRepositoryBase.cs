@@ -15,6 +15,14 @@ namespace RollBack_Core.Interface
 
         void Update(TEntity obj, string id);
 
+        void AddBook(TEntity obj, string id);
+
+        void removeBook(TEntity obj, string id);
+
         void Remove(ObjectId id);
+
+        Task<TEntity> FindByName(string name);
+
+        Task<TEntity> GetByParentID(string parentID);
     }
 }

@@ -9,12 +9,20 @@ namespace RollBack_Core.Interface
         //User service Interface with Post, Put, Update and remove  method
         void Add(TEntity obj);
 
-        Task<IEnumerable<TEntity>> GetAll();
+        Task<TEntity> GetById(ObjectId id);
 
-        Task<TEntity> GetById(ObjectId obj);
+        Task<IEnumerable<TEntity>> GetAll();
 
         void Update(TEntity obj, string id);
 
-        void Remove(ObjectId obj);
+        void AddBook(TEntity obj, string id);
+
+        void removeBook(TEntity obj, string id);
+
+        void Remove(ObjectId id);
+
+        Task<TEntity> FindByName(string name);
+
+        Task<TEntity> GetByParentID(string parentID);
     }
 }

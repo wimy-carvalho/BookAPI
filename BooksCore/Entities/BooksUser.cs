@@ -11,9 +11,22 @@ namespace BooksCore.Entities
         public string _id { get; set; }
 
         [Required]
-        public User _user { get; set; }
+        public string _parentID { get; set; }
 
         [Required]
         public Book[] _books { get; set; }
+
+        public BooksUser(string id, string userID, Book[] books)
+        {
+            _id = id;
+            _parentID = userID;
+            _books = books;
+        }
+
+        public BooksUser(string userID, Book[] books)
+        {
+            _parentID = userID;
+            _books = books;
+        }
     }
 }

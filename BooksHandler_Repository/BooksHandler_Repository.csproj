@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -9,6 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BooksCore\BooksCore.csproj" />
+    <ProjectReference Include="..\BooksCore\BooksHandler_Core.csproj" />
   </ItemGroup>
 </Project>

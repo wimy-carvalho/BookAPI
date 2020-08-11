@@ -5,5 +5,6 @@ namespace BooksCore.Services
 {
     public interface IServiceUser : IServiceBase<User>
     {
+        void AddUser(User user);
     }
 }

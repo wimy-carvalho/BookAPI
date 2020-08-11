@@ -1,12 +1,12 @@
+C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.deps.json
+C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.dll
+C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.pdb
+C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Core.dll
+C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Core.pdb
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.csprojAssemblyReference.cache
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.AssemblyInfoInputs.cache
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.AssemblyInfo.cs
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.csproj.CoreCompileInputs.cache
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.deps.json
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.dll
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksCore.dll
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksCore.pdb
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.csproj.CopyComplete
-C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\bin\Debug\netcoreapp3.1\BooksHandler_Repository.pdb
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.dll
 C:\Users\wimyc\OneDrive\Ambiente de Trabalho\onboarding\MyBookAPI\BookHandler\BooksHandler_Repository\obj\Debug\netcoreapp3.1\BooksHandler_Repository.pdb
